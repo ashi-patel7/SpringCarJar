@@ -16,7 +16,6 @@ DOM.updateGarageButton.onclick = () => updateGarage();
 DOM.specificGarageButton.onclick = () => readIDGarage();
 
 
-
 const getGarage = () => {
   DOM.garageOutput.innerHTML = ``;
 
@@ -58,10 +57,6 @@ const deleteGarage = () => {
 
 const updateGarage = () => {
   axios.put(`http://localhost:8080/garage/update/${DOM.updateGarageID.value}`, {name : DOM.updateName.value})
-=======
-const updateGarage = () => { 
-  axios.put(`/update/${DOM.inputGarageID.value.toString()}`, {name:DOM.inputUpdateGarageName.value,_id:DOM.inputUpdateGarageID.value.toString()})
-
     .then((response) => {
       console.log(response);
       getGarage();
@@ -84,4 +79,3 @@ const readIDGarage = () => {
       console.log(err);
     });
 }
-

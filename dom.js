@@ -22,17 +22,11 @@ export const updateGarageButton = document.getElementById(`updateGarageButton`);
 //Read Cars(READ)
 export const readCarButton = document.getElementById(`readCarButton`);
 //READ Car ID (READ)
-<<<<<<< HEAD
-export const ReadCarIdInput = document.getElementById(`ReadCarIdInput`);
-export const ReadCarId = document.getElementById(`ReadCarId`);
-
-=======
 export const getCarID = document.getElementById(`getCarID`);
 export const specificCarButton = document.getElementById(`specificCarButton`);
 //READ Car Name (READ)
 export const getCarByName = document.getElementById(`getCarByName`);
 export const getCarByNameButton = document.getElementById(`getCarByNameButton`);
->>>>>>> 679248e73124c6d28106f716839288a7f1bc7d0c
 //Create Car (POST)
 export const name = document.getElementById(`name`);
 export const colour = document.getElementById(`colour`);
@@ -42,15 +36,16 @@ export const doors = document.getElementById(`doors`);
 export const garageID = document.getElementById(`garageID`);
 export const createCarButton = document.getElementById(`createCarButton`);
 export const carOutput = document.getElementById(`carOutput`);
-//Delete Car (DELETE)
-export const deleteCarID = document.getElementById(`deleteCarID`);
-export const deleteCarButton = document.getElementById(`deleteCarButton`);
-//Update Car (PUT)
-export const updateCarName = document.getElementById(`updateCarName`);
-export const updateColour = document.getElementById(`updateColour`);
-export const updateMake = document.getElementById(`updateMake`);
-export const updateModel = document.getElementById(`updateModel`);
-export const updateDoors = document.getElementById(`updateDoors`);
-export const updateCarID = document.getElementById(`updateCarID`);
-export const updateCarButton = document.getElementById(`updateCarButton`);
 
+//Delete Car (DELETE)
+export const Delete_CarId = document.getElementById(`Delete_CarID`);
+export const DeleteCar = document.getElementById(`DeleteCar`);
+
+//Update Car (PUT)
+export const Update_CarName = document.getElementById(`updateCarName`);
+export const Update_Make = document.getElementById(`updateMake`);
+export const Update_Model = document.getElementById(`updateModel`);
+export const Update_Colour = document.getElementById(`updateColour`);
+export const Update_Doors = document.getElementById(`updateDoors`);
+export const Update_CarID = document.getElementById(`updateCarID`);
+export const UpdateCar = document.getElementById(`UpdateCar`);

@@ -1,51 +1,4 @@
-
 `use strict`
-
-import * as DOM from './dom.js';
-
-<<<<<<< HEAD
-/*
-const writeItem = item => {
-    const child = document.createElement(`li`);
-    child.id = item._id;
-    child.innerHTML = `${JSON.stringify(item)}`;
-    DOM.CarOutput.appendChild(child);
-}
-
-
-//Read (GET)
-const ReadCar = () => {
-    DOM.CarOutput.innerHTML = ``;
-=======
-DOM.createGarageButton.onclick = () => createGarage();
-DOM.readGarages.onclick = () => getGarage();
-// DOM.createCarButton.onclick = () => carCreate();
-
-const getGarage = () => {
-  DOM.garageOutput.innerHTML = ``;
-
-  axios.get(`http://localhost:8080/garage/read`)
-    .then((response) => {
-      console.log(response);
-      DOM.garageOutput.innerHTML = `${JSON.stringify(response.data)}`;
-    }).catch((err) => {
-      console.log(err);
-    });
-    
-}
-
-const createGarage = () => {
-  axios.post(`http://localhost:8080/garage/create`, {name : DOM.garageName.value})
-    .then((response) => {
-      console.log(response);
-      getGarage();
-    }).catch((err) => {
-      console.log(err);
-    });
-}
->>>>>>> 679248e73124c6d28106f716839288a7f1bc7d0c
-  
-const createcar = () => {`use strict`
 
 import * as DOM from './dom.js';
 
@@ -56,13 +9,15 @@ const writeItem = item => {
   DOM.carOutput.appendChild(child);
 }
 
+//creating an event
 DOM.readCarButton.onclick = () => carRead();
 DOM.createCarButton.onclick = () => carCreate();
-DOM.deleteCarButton.onclick = () => carDelete();
-DOM.updateCarButton.onclick = () => carUpdate();
+DOM.DeleteCar.onclick = () => DeleteCar();
+DOM.UpdateCar.onclick = () => UpdateCar();
 DOM.specificCarButton.onclick = () => carReadID();
 DOM.getCarByNameButton.onclick = () => carFindByName();
 
+//read all cars
 const carRead = () => {
   DOM.carOutput.innerHTML = ``;
 
@@ -80,63 +35,110 @@ const carRead = () => {
     });
 } 
 
-<<<<<<< HEAD
-//Read (GET) - by ID//
-const ReadCarId = () => {
-    DOM.CarOutput.innerHTML = ``;
-=======
+//create car and populate into a garage
 const carCreate = () => {
   axios.post(`http://localhost:8080/car/create`, {
-    name : DOM.name.value,
-    colour : DOM.colour.value,
-    make : DOM.make.value,
-    model : DOM.model.value,
-    doors : DOM.doors.value,
-    garage : {id : DOM.garageID.value}
+    "name" : `${DOM.name.value}`,
+    "colour" : `${DOM.colour.value}`,
+    "make" : `${DOM.make.value}`,
+    "model" : `${DOM.model.value}`,
+    "doors" : `${DOM.doors.value}`,
+    "garage": {"id" : nameToGarage(`${DOM.createGarageButton.value}`).toString()}
   })
     .then((response) => {
       console.log(response);
-      carRead();
+      getGarage();
     }).catch((err) => {
       console.log(err.response.data);
-    });
-}
+    })};
+    DOM.buttonCarCreate.onclick = () => {carCreate();}
+    const nameToGarage = (str) => {
+                console.log(str)
+                axios.get(`http://localhost:8080/garage/read`)
+                .then((response) => {
+                    for (const i of response.data) {      
+                        console.log(i);
+                        if(i.name == str) {
+                            passById = i.id; //pass by ID equals the value in garages by id
+                        }
+                    }
+                    console.log(passById);
+                }).catch((err) => {
+    console.log(err);
+  });
+return passById;}
 
-const carDelete = () => {
-  axios.delete(`http://localhost:8080/car/delete/${DOM.deleteCarID.value}`)
+let passById;
+const createcar = () => {
+  axios.post(`http://localhost:8080/car/create`,
+      {
+        "name": `${DOM.carNameCreate.value}`,
+        "colour":`${DOM.carColourCreate.value}`,
+        "make": `${DOM.carMakeCreate.value}`,
+        "model": `${DOM.carModelCreate.value}`,
+        "doors": `${DOM.carDoorCreate.value}`,
+        "garage": {"id" : nameToGarage(`${DOM.carGarageCreate.value}`).toString()}
+      })
+      .then((response) => {
+          console.log(response);
+          // getGarage();
+      }).catch((err) => {
+          console.log(err);
+  })};
+  DOM.buttonCarCreate.onclick = () => {createcar();}
+    const nameToGarage = (str) => {
+      console.log(str)
+      axios.get(`http://localhost:8080/garage/read`)
+      .then((response) => {
+        for (const i of response.data) {      
+          console.log(i);
+           if(i.name == str) {
+              passById = i.id; //pass by ID equals the value in garages by id
+           }
+        }
+        console.log(passById);
+    }).catch((err) => {
+        console.log(err);
+      });
+    return passById;}
+
+//Delete (DELETE) car
+const DeleteCar = () => {
+  axios.delete(`http://localhost:8080/car/delete/${DOM.Delete_CarId.value}`)
     .then((response) => {
       console.log(response);
-      DOM.deleteCarID.value = "";
+      DOM.Delete_CarId.value = "";
       carRead();
     }).catch((err) => {
       console.log(err);
     });
 }
 
-const carUpdate = () => {
->>>>>>> 679248e73124c6d28106f716839288a7f1bc7d0c
+//Update (PUT) car
+const UpdateCar = () => {
   
-  axios.put(`http://localhost:8080/car/update/${DOM.updateCarID.value}`, {
-    name : DOM.updateCarName.value,
-    colour : DOM.updateColour.value,
-    make : DOM.updateMake.value,
-    model : DOM.updateModel.value,
-    doors : DOM.updateDoors.value
+  axios.put(`http://localhost:8080/car/update/${DOM.Update_CarID.value}`, {
+    "name" : `${DOM.Update_CarName.value}`,
+    "make" : `${DOM.Update_Make.value}`,
+    "model" : `${DOM.Update_Model.value}`,
+    "colour" : `${DOM.Update_Colour.value}`,
+    "doors" : `${DOM.Update_Doors.value}`
   })
     .then((response) => {
       console.log(response);
       carRead();
-      DOM.updateCarName.value = "";
-      DOM.updateColour.value = "";
-      DOM.updateMake.value = "";
-      DOM.updateModel.value = "";
-      DOM.updateDoors.value = "";
-      DOM.updateCarID.value = "";
+      DOM.Update_CarName.value = "";
+      DOM.Update_Make.value = "";
+      DOM.Update_Model.value = "";
+      DOM.Update_Colour.value = "";
+      DOM.Update_Doors.value = "";
+      DOM.Update_CarID.value = "";
     }).catch((err) => {
       console.log(err);
     });
 }
 
+//Read by car id
 const carReadID = () => {
 
   DOM.carOutput.innerHTML = ``;
@@ -150,6 +152,7 @@ const carReadID = () => {
     });
 }
 
+//find car by name
 const carFindByName = () => {
 
   DOM.carOutput.innerHTML = ``;
@@ -162,20 +165,3 @@ const carFindByName = () => {
       console.log(err);
     });
 }
-  axios.post(`http://localhost:8080/car/create`,
-    {
-      "name": `${DOM.CarNameCreate.value}`,
-      "colour":`${DOM.CarColourCreate.value}`,
-      "make": `${DOM.CarMakeCreate.value}`,
-      "model": `${DOM.CarModelCreate.value}`,
-      "doors": `${DOM.CarDoorCreate.value}`,
-    })
-      
-      .then((response) => {
-         console.log(response);
-          getGarage();
-      }).catch((err) => {
-          console.log(err);
-    })};
-    DOM.CarCreate.onclick = () => { console.log(DOM.CarColourCreate.value.toString(),DOM.CarDoorCreate.value,DOM.CarMakeCreate.value, DOM.CarModelCreate.value, DOM.CarNameCreate.value,DOM.CarGarageCreate.value);
-      createcar();}
