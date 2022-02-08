@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         
         <a class="navbar-brand" href="./homepage.html">Notso Trader</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -26,11 +26,67 @@
               <a class="nav-link" href="./cars.html">Cars</a>
             </li>
           </ul>
+
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
-      </nav>
+  </nav>
+
+  <div>
+    <button type="button" id="readGarageButton">Read Garage</button><br/><br/>
+
+    <input type="text" id="getGarageID" placeholder="enter garage ID to read" />
+    <button type="button" id="specificGarageButton">Read Garage ID</button><br/><br/>
+
+    <input type="text" id="garageName" placeholder="enter garage name" />
+    <button type="button" id="createGarageButton">Create Garage</button><br/><br/>
+
+    <input type="text" id="delGarageID" placeholder="enter garage ID to delete" />
+    <button type="button" id="deleteGarageButton">Delete Garage</button><br/><br/>
+
+    <input type="text" id="updateGarageID" placeholder="enter garage ID to update" />
+    <input type="text" id="updateName" placeholder="enter updates name" />
+    <button type="button" id="updateGarageButton">Update Garage</button><br/><br/>
+
+    <ul id="garageOutput"></ul><br/>
+
+    </div>
+
+
+=======
+<!--TRYING TO ADD A DROPDOWN BUTTON-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i>Select Garage</i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">London</a></li>
+          <li><a class="dropdown-item" href="#">Manchester</a></li>
+          <li><a class="dropdown-item" href="#">Edinburgh</a></li>
+        </ul>
+      </div>
+
+<!-- INSERTING UPDATE AND DELETE FUNCTIONS-->
+
+
+<h2>Update</h2>
+<input type="number" id="inputUpdateGarageID" placeholder="Enter Garage ID" />
+<input type="text" id="inputUpdateGarageName" placeholder="Enter Garage Name" />
+<button type="button" id="buttonUpdateGarage">Update Garage</button>
+<hr/>
+<h2>Delete</h2>
+<input type="number" id="inputDeleteGarageID" placeholder="Enter Garage ID" />
+<button type="button" id="buttonDeleteGarage">Delete Garage</button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./garages.js"></script>
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </html>
