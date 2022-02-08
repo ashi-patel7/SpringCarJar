@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         
-        <a class="navbar-brand" href="./homepage.html">Notso Trader</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <a class="navbar-brand" href="./homepage.html">Notso Trader</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,6 +31,44 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
+
+  </nav>
+
+  <button type="button" id="readCarButton">read cars</button><br/><br/>
+
+  <input type="text" id="getCarID" placeholder="enter car ID to read" />
+  <button type="button" id="specificCarButton">Read Car ID</button><br/><br/>
+
+  <input type="text" id="getCarByName" placeholder="enter car name to read" />
+  <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/>
+
+  <input type="text" id="name" placeholder="enter car name" />
+  <input type="text" id="colour" placeholder="enter colour" />
+  <input type="text" id="make" placeholder="enter make" />
+  <input type="text" id="model" placeholder="enter model" />
+  <input type="text" id="doors" placeholder="enter door number" />
+  <input type="text" id="garageID" placeholder="enter garage ID" />
+  <button type="button" id="createCarButton">Create Car</button><br/><br/>
+
+  <input type="text" id="deleteCarID" placeholder="enter Car ID to delete" />
+  <button type="button" id="deleteCarButton">Delete Car</button><br/><br/>
+
+  <input type="text" id="updateCarName" placeholder="enter updated car name" />
+  <input type="text" id="updateColour" placeholder="enter updated colour" />
+  <input type="text" id="updateMake" placeholder="enter updated make" />
+  <input type="text" id="updateModel" placeholder="enter updated model" />
+  <input type="text" id="updateDoors" placeholder="enter updated door number" />
+  <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+  <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+
+  <ul id="carOutput"></ul><br/>
+     
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./car.js"></script>
+=======
       </nav>
     
       <input type="text" id="CarId" placeholder="Enter car id" />
@@ -61,6 +99,7 @@
  <div id="CarOutput"></div><br/>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="module" src="./cars.js"></script>
+
 
 </body>
 </html>
