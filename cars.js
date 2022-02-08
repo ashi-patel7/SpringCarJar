@@ -2,12 +2,14 @@
 
 import * as DOM from './dom.js';
 
+/*
 const writeItem = item => {
     const child = document.createElement(`li`);
     child.id = item._id;
     child.innerHTML = `${JSON.stringify(item)}`;
     DOM.CarOutput.appendChild(child);
 }
+
 
 //Read (GET)
 const ReadCar = () => {
@@ -27,26 +29,6 @@ const ReadCar = () => {
       });
 } 
 
-//Create (POST)
-const CreateCar = () => {
-    axios.post(`http://localhost:8080/car/create`,
-        {
-          "name": `${DOM.name.value}`,
-          "colour":`${DOM.colour.value}`,
-          "make": `${DOM.make.value}`,
-          "model": `${DOM.model.value}`,
-          "doors": `${DOM.doors.value}`,
-        })
-      
-        .then((response) => {
-            console.log(response);
-            getGarage();
-        }).catch((err) => {
-            console.log(err);
-    })};
-
-
-/*
 //Read (GET) - by ID//
 const ReadCarId = () => {
     DOM.CarOutput.innerHTML = ``;

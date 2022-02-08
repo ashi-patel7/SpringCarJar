@@ -24,7 +24,6 @@ export const ReadCar = document.getElementById(`ReadCar`);
 export const ReadCarIdInput = document.getElementById(`ReadCarIdInput`);
 export const ReadCarId = document.getElementById(`ReadCarId`);
 
-
 //Create Car (POST)
 export const name = document.getElementById(`name`);
 export const colour = document.getElementById(`colour`);
