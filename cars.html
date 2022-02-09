@@ -38,23 +38,14 @@
   </nav>
 <!--TRYING TO ADD A DROPDOWN BUTTON-->
   <div class="jumbotron " >
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        <i>Select Garage</i>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">London</a></li>
-        <li><a class="dropdown-item" href="#">Manchester</a></li>
-        <li><a class="dropdown-item" href="#">Edinburgh</a></li>
-      </ul>
-    </div>
-    <button type="button" id="readCarButton">read cars</button><br/><br/>
+    
 
-    <input type="text" id="getCarID" placeholder="enter car ID to read" />
-    <button type="button" id="specificCarButton">Read Car ID</button><br/><br/>
+    <input type="text" id="getCarID" placeholder="search car by id" />
+    <button type="button" id="idCarButton">Read Car ID</button><br/>
+    <button type="button" id="allCarButton">Show All Cars</button><br/>
 
-    <input type="text" id="getCarByName" placeholder="enter car name to read" />
-    <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/>
+    <!-- <input type="text" id="getCarByName" placeholder="enter car name to read" />
+    <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/> -->
 
     
     <div class="row">
@@ -67,7 +58,7 @@
             <input type="text" id="make" placeholder="enter make" />
             <input type="text" id="model" placeholder="enter model" />
             <input type="text" id="doors" placeholder="enter door number" />
-            <input type="text" id="garageID" placeholder="enter garage ID" />
+            <input type="text" id="carGarageName" placeholder="Enter Garage Name" />
             <button type="button" id="createCarButton">Create Car</button><br/><br/>
           </div>
         </div>

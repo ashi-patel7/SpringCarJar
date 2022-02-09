@@ -39,28 +39,17 @@
         </div>
   </nav>
   <div class="jumbotron ">
-    <div>
-      <!--TRYING TO ADD A DROPDOWN BUTTON-->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <i>Select Garage</i>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">London</a></li>
-          <li><a class="dropdown-item" href="#">Manchester</a></li>
-          <li><a class="dropdown-item" href="#">Edinburgh</a></li>
-        </ul>
-      </div>
-      <button type="button" id="readGarageButton">Read Garage</button><br/><br/>
-
+    
       <div class="container">
         <div class="row">
           <div class="col">
-            <input type="text" id="getGarageID" placeholder="enter garage ID to read" />
-            <button class= "" type="button" id="specificGarageButton" >Read Garage ID</button><br/><br/>
+            <i><input type="text" id="getGarageID" placeholder="enter garage ID to read" /></i>
+            <button class= "" type="button" id="idGarageButton" >Search Garage</button>
+            <button class= "" type="button" id="allGarageButton" >Show All Garages</button><br/>
+            <br/>
           </div>
           <div class="col order-5">
-            <input type="text" id="garageName" placeholder="enter garage name" />
+            <i><input type="text" id="garageName" placeholder="enter garage name" /></i>
             <button type="button" id="createGarageButton">Create Garage</button><br/><br/>
           </div>
           <div class="col order-1">
@@ -69,7 +58,7 @@
             <button type="button" id="updateGarageButton">Update Garage</button><br/><br/>
 
             <input type="text" id="delGarageID" placeholder="enter Car ID to delete" />
-            <button type="button" id="deleteGarageButton">Delete Car</button><br/><br/>
+            <button type="button" id="deleteGarageButton">Delete Garage</button><br/><br/>
           </div>
         </div>
         

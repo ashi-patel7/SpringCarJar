@@ -1,10 +1,10 @@
 
 //GARAGE
 //Read Garage(READ)
-export const readGarageButton = document.getElementById(`readGarageButton`);
+export const allGarageButton = document.getElementById(`allGarageButton`);
 //READ Garage ID (READ)
 export const getGarageID = document.getElementById(`getGarageID`);
-export const specificGarageButton = document.getElementById(`specificGarageButton`);
+export const idGarageButton = document.getElementById(`idGarageButton`);
 //Create Garage(POST)
 export const garageName = document.getElementById(`garageName`);
 export const createGarageButton = document.getElementById(`createGarageButton`);
@@ -20,20 +20,20 @@ export const updateGarageButton = document.getElementById(`updateGarageButton`);
 
 //CARS
 //Read Cars(READ)
-export const readCarButton = document.getElementById(`readCarButton`);
+export const allCarButton = document.getElementById(`allCarButton`);
 //READ Car ID (READ)
 export const getCarID = document.getElementById(`getCarID`);
-export const specificCarButton = document.getElementById(`specificCarButton`);
+export const idCarButton = document.getElementById(`idCarButton`);
 //READ Car Name (READ)
-export const getCarByName = document.getElementById(`getCarByName`);
-export const getCarByNameButton = document.getElementById(`getCarByNameButton`);
+// export const getCarByName = document.getElementById(`getCarByName`);
+// export const getCarByNameButton = document.getElementById(`getCarByNameButton`);
 //Create Car (POST)
 export const name = document.getElementById(`name`);
 export const colour = document.getElementById(`colour`);
 export const make = document.getElementById(`make`);
 export const model = document.getElementById(`model`);
 export const doors = document.getElementById(`doors`);
-export const garageID = document.getElementById(`garageID`);
+export const carGarageName = document.getElementById(`carGarageName`);
 export const CarCreate = document.getElementById(`createCarButton`);
 export const carOutput = document.getElementById(`carOutput`);
 //Delete Car (DELETE)
