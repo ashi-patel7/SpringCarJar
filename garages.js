@@ -9,13 +9,21 @@ const writeItem = item => {
   DOM.garageOutput.appendChild(child);
 }
 
-DOM.createGarageButton.onclick = () => createGarage();
-DOM.readGarageButton.onclick = () => getGarage();
-DOM.deleteGarageButton.onclick = () => deleteGarage();
-DOM.updateGarageButton.onclick = () => updateGarage();
-DOM.specificGarageButton.onclick = () => readIDGarage();
 
+<<<<<<< HEAD
+=======
 
+const createGarage = () => {
+  axios.post(`http://localhost:8080/garage/create`, {name : DOM.garageName.value})
+  .then((response) => {
+      console.log(response);
+      getGarage();
+    }).catch((err) => {
+      console.log(err);
+    });
+}
+//Read ALL Garages
+>>>>>>> 7d5e607690bceedcc348510c01cf8e2d0071d6c6
 const getGarage = () => {
   DOM.garageOutput.innerHTML = ``;
 
@@ -34,15 +42,6 @@ const getGarage = () => {
     
 }
 
-const createGarage = () => {
-  axios.post(`http://localhost:8080/garage/create`, {name : DOM.garageName.value})
-    .then((response) => {
-      console.log(response);
-      getGarage();
-    }).catch((err) => {
-      console.log(err);
-    });
-}
 
 const deleteGarage = () => {
   axios.delete(`http://localhost:8080/garage/delete/${DOM.delGarageID.value}`)
@@ -78,4 +77,14 @@ const readIDGarage = () => {
     }).catch((err) => {
       console.log(err);
     });
+<<<<<<< HEAD
 }
+=======
+}
+
+DOM.createGarageButton.onclick = () => createGarage();
+DOM.allGarageButton.onclick = () => getGarage();
+DOM.deleteGarageButton.onclick = () => deleteGarage();
+DOM.updateGarageButton.onclick = () => updateGarage();
+DOM.idGarageButton.onclick = () => readIDGarage();
+>>>>>>> 7d5e607690bceedcc348510c01cf8e2d0071d6c6

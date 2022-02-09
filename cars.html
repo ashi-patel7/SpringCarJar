@@ -7,8 +7,11 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-        
-    <a class="navbar-brand" href="./homepage.html">Notso Trader</a>
+    <a class="navbar-brand" href="#">
+      <img src="./img/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+      NotSo Trader
+    </a>   
+    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +36,11 @@
         </div>
 
   </nav>
+<!--TRYING TO ADD A DROPDOWN BUTTON-->
+  <div class="jumbotron " >
+    
 
+<<<<<<< HEAD
   <button type="button" id="readCarButton">read cars</button><br/><br/>
 
   <input type="text" id="getCarID" placeholder="enter car ID to read" />
@@ -60,14 +67,97 @@
   <input type="text" id="updateDoors" placeholder="enter updated door number" />
   <input type="text" id="updateCarID" placeholder="enter car ID to update" />
   <button type="button" id="UpdateCar">Update Car</button><br/><br/>
+=======
+    <input type="text" id="getCarID" placeholder="search car by id" />
+    <button type="button" id="idCarButton">Read Car ID</button><br/>
+    <button type="button" id="allCarButton">Show All Cars</button><br/>
 
-  <ul id="carOutput"></ul><br/>
+    <!-- <input type="text" id="getCarByName" placeholder="enter car name to read" />
+    <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/> -->
+>>>>>>> 7d5e607690bceedcc348510c01cf8e2d0071d6c6
+
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Create </h5>
+            <input type="text" id="name" placeholder="enter car name" />
+            <input type="text" id="colour" placeholder="enter colour" />
+            <input type="text" id="make" placeholder="enter make" />
+            <input type="text" id="model" placeholder="enter model" />
+            <input type="text" id="doors" placeholder="enter door number" />
+            <input type="text" id="carGarageName" placeholder="Enter Garage Name" />
+            <button type="button" id="createCarButton">Create Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Update </h5>
+            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+            <input type="text" id="updateColour" placeholder="enter updated colour" />
+            <input type="text" id="updateMake" placeholder="enter updated make" />
+            <input type="text" id="updateModel" placeholder="enter updated model" />
+            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Delete By ID </h5>
+            <input type="text" id="deleteCarID" placeholder="enter Car ID to delete" />
+            <button type="button" id="deleteCarButton">Delete Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Delete </h5>
+            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+            <input type="text" id="updateColour" placeholder="enter updated colour" />
+            <input type="text" id="updateMake" placeholder="enter updated make" />
+            <input type="text" id="updateModel" placeholder="enter updated model" />
+            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
      
+      
+    </div>
+    <div class="card text-center">
+      <div class="card-header">
+        Cars Available
+      </div>
+      <div class="card-body">
+         <ul id="garageOutput"></ul><br/>
+         <ul id="carOutput"></ul><br/>
+      </div>
+    </div>
 
+<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./cars.js"></script>
 
 
+=======
+  </div>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./cars.js"></script>
+
+>>>>>>> 7d5e607690bceedcc348510c01cf8e2d0071d6c6
 
 </body>
 </html>
